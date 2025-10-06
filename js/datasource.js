@@ -1,5 +1,5 @@
 ﻿const FIREBALL_API = "https://ssd-api.jpl.nasa.gov/fireball.api";
-const SAMPLE_URL = "../data/sample.json";
+const SAMPLE_URL = new URL("../data/sample.json", import.meta.url).href;
 
 function parseNumber(value) {
   if (value === null || value === undefined || value === "") {
@@ -75,3 +75,4 @@ export async function loadRandomEvent() {
     return fallback;
   }
 }
+
