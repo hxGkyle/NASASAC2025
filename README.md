@@ -50,9 +50,7 @@ meteor-madness/
 | Damage radii | R = k * E_ground^(1/3) | k1=0.05, k2=0.10, k3=0.20 (meters) |
 | Risk level | Low < 10^2 t TNT < Medium < 10^4 t TNT <= High | Matches UI thresholds |
 
-- 使用指数衰减近似：E_ground = E0 · exp(−K / sinφ)，K = Cd·A·ρ0·H / m；常量取 Cd=1.0、ρ0=1.225、H=8500、h_top=80km。
-- 角度、半径、质量、速度均影响落地能量。
-- 半径按 E_ground^(1/3) 缩放，阈值分级为 Low/Medium/High，教育演示用途。
+
 
 **Limitations**
 - Ignores atmospheric ablation, fragmentation, and ground material response.
@@ -63,7 +61,6 @@ meteor-madness/
 ## Data Attribution
 - https://ssd-api.jpl.nasa.gov/fireball.api
 - https://cneos.jpl.nasa.gov/fireballs/
-- https://www.nasa.gov/meteoroid-environment-office/
 - https://www.usgs.gov/3d-elevation-program
 
 ## Demo Outline
