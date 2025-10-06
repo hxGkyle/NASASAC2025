@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meteor Madness</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="hud header">
+      <h1>Meteor Madness</h1>
+      <p class="tagline">Interactive meteor impact sandbox powered by NASA fireball data.</p>
+    </header>
+
+    <main id="stage">
+      <div id="map" aria-label="Impact map"></div>
+      <section id="direction-indicator" class="hud panel" tabindex="0" aria-label="Impact direction indicator">
+        <div class="direction-view">
+          <canvas id="dir-plan" data-view="plan" width="240" height="240" aria-label="Azimuth direction compass"></canvas>
+        </div>
+        <div class="direction-view">
+          <canvas id="dir-profile" data-view="profile" width="240" height="160" aria-label="Elevation profile diagram"></canvas>
+        </div>
+        <p class="direction-risk" data-role="risk-label">Risk: Low</p>
+      </section>
+      <aside id="controls-container" class="hud panel"></aside>
+    </main>
+
+    <footer class="hud footer">
+      <small>
+        Data sources: <a href="https://ssd-api.jpl.nasa.gov/fireball.api" target="_blank" rel="noopener">CNEOS Fireball API</a>,
+        <a href="https://cneos.jpl.nasa.gov/fireballs/" target="_blank" rel="noopener">CNEOS Fireballs</a>,
+        <a href="https://www.usgs.gov/3d-elevation-program" target="_blank" rel="noopener">USGS 3DEP</a>
+      </small>
+    </footer>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
+
